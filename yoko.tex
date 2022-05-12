@@ -1,0 +1,122 @@
+%
+% B4/M2中間発表予稿テンプレ
+%
+% File : 	 yoko.tex
+% Author : 	 山根 惇秀
+% Created on 2022/05/12
+%
+\documentclass[a4j]{jarticle}
+%
+% パッケージ
+%
+\usepackage[dvipdfmx]{graphicx}	% 画像表示用
+\usepackage{amsmath}				
+\usepackage{amsfonts}					% 数学用の特殊フォント用
+\usepackage{multicol}					% 二段組
+\usepackage{indentfirst}				% 文の最初にインデント
+\usepackage{multirow}
+\usepackage{hhline}
+%
+% 印刷領域等の設定
+%
+\addtolength{\topmargin}{-25mm}
+\setlength{\oddsidemargin}{-12mm}
+\setlength{\evensidemargin}{-12mm}
+\setlength{\textwidth}{185.0mm}   
+\setlength{\textheight}{270.0mm}  
+\headheight 7mm
+\headsep 2mm
+\setlength{\columnsep}{8mm}
+%
+% 行間の倍率を指定（完成してからページ全体に文章が入るよう調整するとき便利：初期値=1.0）
+%
+\renewcommand{\baselinestretch}{1.0}
+%
+% ページ番号（発表順序）
+%
+\pagestyle{plain}
+\setcounter{page}{40}				% ここに発表順序を書く
+%
+% sectionコマンドの書き換え（余分な行間を消して，サイズ変更，不要な場合はコメントアウト）
+%
+\makeatletter
+\def\section{\@startsection {section}{1}{\z@}{-0.8ex plus -1ex minus -.2ex}{0.8 ex plus .2ex}{\large\bf}}
+\makeatother 
+%
+% 本文
+%
+\begin{document}
+\twocolumn[
+	% \hfill{xx-xx} \\ %後で発表順を連絡します
+	\begin{center}
+		{\LARGE \bf タイトル }\\
+		~\\
+		\vspace{-3mm}
+		{\Large 氏名}
+	\end{center}
+	\vspace{3mm}
+]
+%
+% 文章の全体の文字フォントサイズと，1行を占める文字フォントサイズ
+%
+\fontsize{9.5pt}{10.5pt}\selectfont
+%
+% 1章
+%
+%
+%
+
+\section{はじめに}
+\section{交通流モデル}
+
+\newpage
+
+
+
+%\begin{figure}[htbp]%[tbp]
+% 		\begin{center}
+%  		\vspace{-3mm}	
+%  		\includegraphics[angle=270,scale=0.5]{./figure/Q.eps}
+%  		\vspace{-1mm}	
+%		\caption{$\eta:1 \rightarrow 10000のシミュレーション結果$}
+%		\label{Q}	
+%		\vspace{-7mm}	
+% 		\end{center}
+%\end{figure}
+%
+%\begin{figure}[htbp]%[tbp]
+% 		\begin{center}
+%  		\vspace{-3mm}	
+%  		\includegraphics[angle=270,scale=0.5]{./figure/R.eps}
+%  		\vspace{-1mm}	
+%		\caption{$\eta:0.0001 \rightarrow 10000 のシミュレーション結果$}
+%		\label{R}	
+%		\vspace{-7mm}	
+% 		\end{center}
+%\end{figure}
+
+
+\section{特徴量選択}
+
+%
+%
+%
+\section{障害物検知手法}
+
+\newpage
+%
+% 参考文献
+%
+\begin{thebibliography}{9}
+% 参考文献を書く（学会毎に定義されている書き方に従って書いたほうが良い）
+% 例.
+% 電子情報通信学会: https://www.ieice.org/jpn/shiori/iss_2.html
+% 情報処理学会: http://www.ipsj.or.jp/journal/submit/ronbun_j_prms.html
+% 以下は電子情報通信学会の参考文献に従って書いた例
+
+%以下のコマンドを使用して，参考文献を記載
+%\bibitem{}
+
+\end{thebibliography}
+\end{document}
+"

@@ -1,0 +1,53 @@
+{
+  "plugins": [
+    "latex2e"
+  ],
+  "rules": {
+    // 漢字よりもひらがなで表記したほうが読みやすい副詞を指摘
+    "ja-hiragana-fukushi": true,
+    // 漢字よりもひらがなで表記したほうが読みやすい名詞を指摘
+    "ja-hiragana-keishikimeishi": true,
+    // 漢字よりもひらがなで表記したほうが読みやすい動詞を指摘
+    "ja-hiragana-hojodoushi": true,
+    // 1つの文章中に同一語彙の別表記を利用している場合を表記ゆれとしてエラーにする
+    "@textlint-ja/no-synonyms": {
+      // 許可するワードの配列
+      // 例) ["ウェブアプリ", "ウェブアプリケーション"]
+      "allows": [
+        "学習",
+        "研究"
+      ],
+      // 使用を許可する見出し語の配列
+      // 例) ["ユーザー"] // => 「ユーザー」だけ許可し「ユーザ」などはエラーにする
+      "preferWords": [
+        "ユーザー"
+      ],
+      // 同じ語形の語の中でのアルファベットの表記揺れを許可するかどうか
+      "allowAlphabet": false,
+      // 同じ語形の語の中での漢数字と数字の表記ゆれを許可するかどうか
+      "allowNumber": false,
+      // 語彙素の異なる同義語を許可するかどうか
+      "allowLexeme": false
+    },
+    "preset-ja-engineering-paper": true,
+    // 日本語周りにおけるスペースの有無を決定
+    "preset-ja-spacing": true,
+    // である調に統一
+    "no-mix-dearu-desumasu": {
+      "preferInHeader": "である",
+      "preferInBody": "である",
+      "preferInList": "である",
+      // 文末以外でも、敬体(ですます調)と常体(である調)を厳しくチェックするかどうか
+      "strict": true
+    },
+    // 指定文字数以上の漢字を連続させない
+    "max-kanji-continuous-len": {
+      "max": 8
+    },
+    "prh": {
+      "rulePaths": [
+        "./prh.yml"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+version: 1
+
+rules:
+  - expected: 走行情報
+    pattern: 挙動情報
+    specs:
+      - from: 挙動情報
+        to: 走行情報
+  - expected: 既存手法
+    pattern: 従来手法
